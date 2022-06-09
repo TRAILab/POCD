@@ -18,7 +18,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: POCD: Probabilistic Object-Level Change Detection and Volumetric Mapping in Semi-Static Scenes
+title: "POCD: Probabilistic Object-Level Change Detection and Volumetric Mapping in Semi-Static Scenes"
 email: veronica.chatrath@robotics.utias.utoronto.ca
 description: |
   Jingxing Qian, Veronica Chatrath, Jun Yang, James Servos, Angela P. Schoellig, Steven L. Waslander
