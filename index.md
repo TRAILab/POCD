@@ -16,7 +16,7 @@ title: POCD: Probabilistic Object-Level Change Detection and Volumetric Mapping 
 
 ## Overview
 <p style="text-align:center;"><img
-    src="Figures/POCD_pipeline.pdf" align="center">
+    src="Figures/POCD_pipeline.png" align="center">
 </p>
 
 ## Abstract
