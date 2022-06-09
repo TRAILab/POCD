@@ -26,7 +26,7 @@ Maintaining an up-to-date map to reflect recent changes in the scene is very imp
 ## Paper
 **[POCD: Probabilistic Object-Level Change Detection and Volumetric Mapping in Semi-Static Scenes](https://arxiv.org/abs/2205.01202)**\
 [Jingxing Qian](https://scholar.google.com/citations?user=OZk7X80AAAAJ&hl=en&authuser=1), [Veronica Chatrath](https://scholar.google.com/citations?user=yRjO8GYAAAAJ&hl=en&authuser=1), [Jun Yang](https://scholar.google.com/citations?user=kf0gAOAAAAAJ&hl=en), [James Servos](https://scholar.google.com/citations?hl=en&authuser=1&user=S-cpmfYAAAAJ), [Angela P. Schoellig](https://scholar.google.com/citations?user=QMfeRz0AAAAJ&hl=en&authuser=1), and [Steven L. Waslander](https://scholar.google.com/citations?user=jY_Bcd8AAAAJ&hl=en)\
-RSS 2022
+Robotics: Science and Systems (RSS) 2022
 
 ```bibtex
 @INPROCEEDINGS{QianChatrathPOCD,
