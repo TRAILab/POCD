@@ -14,13 +14,13 @@ title: POCD: Probabilistic Object-Level Change Detection and Volumetric Mapping 
 }
 </style>
 
-## Overview
+## POCD Pipeline 
 
 <p style="text-align:center;"><img
     src="Figures/POCD_pipeline.png" align="center">
 </p>
-A comparison of semi-static scene reconstruction between our method, POCD, and that of a traditional TSDF method on the TorWIC 1-5 route. Using the traditional TSDF update method, artifacts, as boxed in red, persist after the box walls have moved between traversals. By comparison, our method produces a clean map that reflects the up-to-date scenario despite changed object poses. The bottom row shows our reconstructed map, along with object bounding
-boxes, before and after the scene has changed. 
+
+Our object-aware map update framework for semi-static environments. The system takes in RGB-D frames, each one semantically annotated and converted to a semantic point cloud. The point cloud is clustered into observations, and associated to mapped objects. A TSDF-based object-level change estimation is performed between the associated observation-object pairs, followed by a joint probabilistic update of the geometric change and stationarity score. Objects with a high stationarity score are used to generate the new map, and the low-score objects are discarded.
 
 ## Abstract
 Maintaining an up-to-date map to reflect recent changes in the scene is very important, particularly in situations involving repeated traversals by a robot operating in an environment over an extended period. Undetected changes may cause a deterioration in map quality, leading to poor localization, inefficient operations, and lost robots. Volumetric methods, such as truncated signed distance functions (TSDFs), have quickly gained traction due to their real-time production of a dense and detailed map, though map updating in scenes that change over time remains a challenge. We propose a framework that introduces a novel probabilistic object state representation to track object pose changes in semi-static scenes. The representation jointly models a stationarity score and a TSDF change measure for each object. A Bayesian update rule that incorporates both geometric and semantic information is derived to achieve consistent online map maintenance. To extensively evaluate our approach alongside the state-of-the-art, we release a novel real-world dataset in a warehouse environment. We also evaluate on the public ToyCar dataset. Our method outperforms state-of-the-art methods on the reconstruction quality of semi-static environments. The dataset is available [here](https://github.com/Viky397/TorWICDataset).
