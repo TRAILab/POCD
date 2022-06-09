@@ -1,5 +1,5 @@
 ---
-title: Point Density-Aware Voxels for LiDAR 3D Object Detection
+title: POCD: Probabilistic Object-Level Change Detection and Volumetric Mapping in Semi-Static Scenes
 ---
 
 <style>
@@ -20,12 +20,12 @@ title: Point Density-Aware Voxels for LiDAR 3D Object Detection
 </p>
 
 ## Abstract
-LiDAR has become one of the primary 3D object detection sensors in autonomous driving. However, LiDAR's diverging point pattern with increasing distance results in a non-uniform sampled point cloud ill-suited to discretized volumetric feature extraction. Current methods either rely on voxelized point clouds or use inefficient farthest point sampling to mitigate detrimental effects caused by density variation but largely ignore point density as a feature and its predictable relationship with distance from the LiDAR sensor. Our proposed solution, Point Density-Aware Voxel network (PDV), is an end-to-end two stage LiDAR 3D object detection architecture that is designed to account for these point density variations. PDV efficiently localizes voxel features from the 3D sparse convolution backbone through voxel point centroids. The spatially localized voxel features are then aggregated through a density-aware RoI grid pooling module using kernel density estimation (KDE) and self-attention with point density positional encoding. Finally, we exploit LiDAR's point density to distance relationship to refine our final bounding box confidences. PDV outperforms all state-of-the-art methods on the Waymo Open Dataset and achieves competitive results on the KITTI dataset. We provide a code release for PDV which is available [here](https://github.com/TRAILab/PDV).
+Maintaining an up-to-date map to reflect recent changes in the scene is very important, particularly in situations involving repeated traversals by a robot operating in an environment over an extended period. Undetected changes may cause a deterioration in map quality, leading to poor localization, inefficient operations, and lost robots. Volumetric methods, such as truncated signed distance functions (TSDFs), have quickly gained traction due to their real-time production of a dense and detailed map, though map updating in scenes that change over time remains a challenge. We propose a framework that introduces a novel probabilistic object state representation to track object pose changes in semi-static scenes. The representation jointly models a stationarity score and a TSDF change measure for each object. A Bayesian update rule that incorporates both geometric and semantic information is derived to achieve consistent online map maintenance. To extensively evaluate our approach alongside the state-of-the-art, we release a novel real-world dataset in a warehouse environment. We also evaluate on the public ToyCar dataset. Our method outperforms state-of-the-art methods on the reconstruction quality of semi-static environments. The dataset is available [here](https://github.com/TRAILab/PDV).
 
 ---
 ## Paper
-**[Point Density-Aware Voxels for LiDAR 3D Object Detection](https://arxiv.org/abs/2203.05662)**\
-[Jordan S. K. Hu](https://scholar.google.com/citations?user=aPx2zd8AAAAJ&hl=en), [Tianshu Kuai](https://scholar.google.com/citations?user=mFQ8ICgAAAAJ&hl=en), and [Steven L. Waslander](https://scholar.google.com/citations?user=jY_Bcd8AAAAJ&hl=en)\
+**[POCD: Probabilistic Object-Level Change Detection and Volumetric Mapping in Semi-Static Scenes](https://arxiv.org/abs/2205.01202)**\
+[Veronica Chatrath](https://scholar.google.com/citations?user=aPx2zd8AAAAJ&hl=en), [Tianshu Kuai](https://scholar.google.com/citations?user=mFQ8ICgAAAAJ&hl=en), and [Steven L. Waslander](https://scholar.google.com/citations?user=jY_Bcd8AAAAJ&hl=en)\
 CVPR 2022
 ```
 @article{PDV,
